@@ -1,0 +1,31 @@
+url: https://github.com/mrichardson03/aws-guardduty-miner
+description: >
+  Miner for AWS GuardDuty.
+
+prototypes:
+  guardduty:
+    author: Michael Richardson
+    class: guardduty.GuardDutyMiner
+    development_status: EXPERIMENTAL
+    node_type: miner
+    indicator_types: 
+      - IPv4
+    tags:
+      - extension
+      - guarddutyminer
+    description: >
+      Miner for AWS GuardDuty.
+    config:
+      # source name used in the indicators
+      source_name: guardduty.findings
+      # age out of indicators
+      # disabled, removed when they disappear from the channel
+      age_out:
+        sudden_death: true
+        default: null
+      # flag indicators with share level green
+      attributes:
+        type: IPv4
+        direction: inbound
+        share_level: green
+        confidence: 50
