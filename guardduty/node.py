@@ -10,7 +10,11 @@ from minemeld.ft.basepoller import BasePollerFT
 
 LOG = logging.getLogger(__name__)
 
-import botocore.vendored.requests.packages.urllib3.contrib.pyopenssl; botocore.vendored.requests.packages.urllib3.contrib.pyopenssl.inject_into_urllib3()
+# we need pyOpenSSL in Python < 2.7.9 to enable SNI and TLS
+# as botocore uses its own version of requests/urllib3 we should
+# enable pyopenssl there
+import botocore.vendored.requests.packages.urllib3.contrib.pyopenssl
+botocore.vendored.requests.packages.urllib3.contrib.pyopenssl.inject_into_urllib3()
 
 
 class Miner(BasePollerFT):
