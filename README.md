@@ -1,13 +1,6 @@
 # aws-guardduty-miner
 MineMeld Miner for [AWS GuardDuty](https://aws.amazon.com/guardduty/) implemented as an extension.
 
-## Requirements
-
-This extension requires MineMeld to be running on Ubuntu 16.04, which is currently marked as 
-**EXPERIMENTAL**.  Running on Ubuntu 14.04 results in an OpenSSL version that is too old to
-successfully talk to GuardDuty.  To deploy on the required version, use the 
-[minemeld-ansible](https://github.com/PaloAltoNetworks/minemeld-ansible) playbook.
-
 ## Installation
 
 You can install this extension directly from the git repository using the MineMeld GUI, or build 
