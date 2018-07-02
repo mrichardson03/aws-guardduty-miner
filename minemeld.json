@@ -6,8 +6,11 @@
     "description": "Minemeld extension for mining events from AWS GuardDuty",
     "url": "https://github.com/mrichardson03/aws-guardduty-miner",
     "entry_points": {
+        "minemeld_webui": {
+            "guarddutyWebui": "guardduty:webui_blueprint"
+        },
         "minemeld_nodes": {
-            "guardduty.GuardDutyMiner": "guardduty.node:GuardDutyMiner"
+            "guardduty.Miner": "guardduty.node:Miner"
         },
         "minemeld_prototypes": {
             "guardduty.prototypes": "guardduty:prototypes"
