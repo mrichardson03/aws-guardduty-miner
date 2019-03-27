@@ -3,8 +3,20 @@ MineMeld Miner for [AWS GuardDuty](https://aws.amazon.com/guardduty/) implemente
 
 ## Installation
 
-You can install this extension directly from the git repository using the MineMeld GUI, or build 
-the python wheel with: `python setup.py bdist_wheel` and install as an extension.
+You can install this extension directly from the git repository using the
+MineMeld GUI:
+
+After installing, restart the MineMeld services:
+
+```
+sudo -u minemeld /opt/minemeld/engine/current/bin/supervisorctl -c /opt/minemeld/local/supervisor/config/supervisord.conf restart all
+```
+
+Now, clone a new `guardduty.miner` node, and commit the configuration.  You may
+need to refresh your browser manually to see the prototype.
+
+Finally, edit the cloned node's properties, and add the AWS region, access key,
+secret key, and GuardDuty collector ID.
 
 ## Usage
 
