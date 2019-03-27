@@ -9,6 +9,8 @@ MineMeld Miner for [AWS GuardDuty](https://aws.amazon.com/guardduty/) implemente
 You can install this extension directly from the git repository using the
 MineMeld GUI:
 
+![screen capture](https://mrichardson03.github.io/aws-guardduty-miner/mm-git-extension.gif)
+
 After installing, restart the MineMeld services:
 
 ```
