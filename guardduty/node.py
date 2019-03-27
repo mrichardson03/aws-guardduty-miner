@@ -74,9 +74,13 @@ class Miner(BasePollerFT):
         if self.region_name is None:
             raise RuntimeError('{} - Region name not set, poll not performed'.format(self.name))
         if self.aws_access_key_id is None:
-            raise RuntimeError('{} - AWS Access Key ID not set, poll not performed'.format(self.name))
+            raise RuntimeError(
+                '{} - AWS Access Key ID not set, poll not performed'.format(self.name)
+            )
         if self.aws_secret_access_key is None:
-            raise RuntimeError('{} - AWS Secret Access Key not set, poll not performed'.format(self.name))
+            raise RuntimeError(
+                '{} - AWS Secret Access Key not set, poll not performed'.format(self.name)
+            )
 
         self.client = boto3.client(
             'guardduty', region_name=self.region_name, verify=self.verify_cert,
