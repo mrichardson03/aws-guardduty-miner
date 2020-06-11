@@ -1,6 +1,6 @@
 # aws-guardduty-miner
 
-[![Build Status](https://travis-ci.org/mrichardson03/aws-guardduty-miner.svg?branch=master)](https://travis-ci.org/mrichardson03/aws-guardduty-miner)
+**NOTE**: I don't use this extension any more, and am no longer maintaining it.  If you use it, please fork and take over maintenance.
 
 MineMeld Miner for [AWS GuardDuty](https://aws.amazon.com/guardduty/) implemented as an extension.
 
